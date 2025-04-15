@@ -42,9 +42,9 @@ const arrayOfContent = [
           <hr>
           <img src="img/Contents/${item.photo}" alt="">
           <div>
-            <p>${item.rating}</p>
-            <p> Ціна: ${item.type}</p>
-            <p>Ціна за купоном: ${item.id}</p>
+            <p>🐾${item.rating}</p>
+            <p> Ціна: ${item.type} грн</p>
+            <p>Ціна за купоном: ${item.id} грн</p>
           </div>
         </div>
       `;
