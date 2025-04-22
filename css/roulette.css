@@ -1,0 +1,156 @@
+body {
+    background: linear-gradient(135deg, #FFD700, #FFCC00, #FFD700);
+    color: gold;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-size: 200% 200%; /* Додаємо анімацію для фону */
+    animation: gradientAnimation 5s ease infinite;
+    margin: 0;
+    min-height: 100vh;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.casino-header {
+    font-size: 32px;
+    padding: 20px;
+    background: linear-gradient(90deg, #FFD700, #FF0000, #FFD700);
+    border: 5px groove gold;
+    box-shadow: 0 0 30px red, 0 0 60px gold;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #fff;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.roulette-wrapper {
+    position: relative;
+    margin: 0 auto 20px;
+    width: 400px;
+    height: 400px;
+}
+
+.arrow {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: red;
+    z-index: 10;
+    text-shadow: 0 0 10px gold;
+}
+
+.wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px double gold;
+    box-shadow: 0 0 20px red, 0 0 40px gold inset;
+    background: conic-gradient(
+      #ff0000 0% 12.5%,
+      #00ff00 12.5% 25%,
+      #0000ff 25% 37.5%,
+      #ffff00 37.5% 50%,
+      #ff00ff 50% 62.5%,
+      #00ffff 62.5% 75%,
+      #ff8800 75% 87.5%,
+      gold 87.5% 100%
+    );
+    position: relative;
+    transition: transform 5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    transform-origin: 100% 100%;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.segment:nth-child(1) { transform: rotate(22.5deg) translate(50%, -50%); }
+.segment:nth-child(2) { transform: rotate(67.5deg) translate(50%, -50%); }
+.segment:nth-child(3) { transform: rotate(112.5deg) translate(50%, -50%); }
+.segment:nth-child(4) { transform: rotate(157.5deg) translate(50%, -50%); }
+.segment:nth-child(5) { transform: rotate(202.5deg) translate(50%, -50%); }
+.segment:nth-child(6) { transform: rotate(247.5deg) translate(50%, -50%); }
+.segment:nth-child(7) { transform: rotate(292.5deg) translate(50%, -50%); }
+.segment:nth-child(8) { transform: rotate(337.5deg) translate(50%, -50%); }
+
+button {
+    padding: 15px 30px;
+    font-size: 22px;
+    background-color: gold;
+    color: black;
+    border: 3px solid red;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 20px red;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #ffcc00;
+    box-shadow: 0 0 30px red;
+}
+
+#result {
+    margin-top: 40px;
+    font-size: 28px;
+    color: white;
+    text-shadow: 1px 1px 3px red;
+}
+
+.spin-btn {
+    margin-top: 40px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Додаємо анімацію для переливів рамок */
+* {
+
+    border-radius: 10px;
+    background-clip: padding-box;
+    animation: borderAnimation 3s ease infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: red;
+    }
+    25% {
+        border-color: green;
+    }
+    50% {
+        border-color: blue;
+    }
+    75% {
+        border-color: yellow;
+    }
+    100% {
+        border-color: red;
+    }
+}

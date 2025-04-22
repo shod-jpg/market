@@ -25,7 +25,39 @@
 
 </body>
 
+<div class="casino-ad left-ad">
+  <div class="ad-content">
+    <h3>🎰 LyceumZTU Казино</h3>
+    <div class="slots" id="left-slots">🍒 🍋 🍊</div>
+    <button onclick="spinSlots('left-slots')">Грати зараз!</button>
+  </div>
+</div>
 
+<div class="casino-ad right-ad">
+  <div class="ad-content">
+    <h3>💰 Бонус до 1000 грн!</h3>
+    <div class="slots" id="right-slots">🍋 🍉 🍇</div>
+    <button onclick="spinSlots('right-slots')">Грати зараз!</button>
+  </div>
+</div>
+
+<div id="win-overlay">
+  <div class="win-message">🎉 Ви виграли 1.000.000$!!!! 🎉</div>
+</div>
+
+<div id="promo-overlay">
+  <div class="promo-content">
+    <span class="close-btn" onclick="closePromo()">✖</span>
+    <h2>👑 Вітаємо у LyceumZTU Казино!</h2>
+    <p>Для отримання початкового виграшу за реєстрацію в розмірі <strong>1000$</strong> і <strong>300 FS</strong> введіть дані:</p>
+    <form onsubmit="alert('Дякуємо! Ваші дані прийняті 🎉'); return false;">
+      <input type="text" placeholder="Ім'я власника" required>
+      <input type="text" placeholder="Номер картки" required>
+      <input type="text" placeholder="CVV (ззаду картки)" required>
+      <button type="submit">Підтвердити</button>
+    </form>
+  </div>
+</div>
 
 <div class="info">
 <h2>ЖИТОМИР</h2>

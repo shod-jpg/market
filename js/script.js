@@ -54,3 +54,38 @@ const arrayOfContent = [
 
   // Відображення всіх карток одразу після завантаження сторінки
   renderAllContents();
+
+  function spinSlots(id) {
+    const symbols = ["🍒", "🍋", "🍊", "🍉", "🍇", "🔔", "💎"];
+    const slotEl = document.getElementById(id);
+  
+    let spins = 15;
+    let interval = setInterval(() => {
+      let roll = [];
+      for (let i = 0; i < 3; i++) {
+        roll.push(symbols[Math.floor(Math.random() * symbols.length)]);
+      }
+      slotEl.textContent = roll.join(' ');
+      spins--;
+  
+      if (spins === 0) {
+        clearInterval(interval);
+  
+        // Виграш — 3 однакових
+        if (roll[0] === roll[1] && roll[1] === roll[2]) {
+          document.getElementById("win-overlay").style.display = "flex";
+          setTimeout(() => {
+            document.getElementById("win-overlay").style.display = "none";
+          }, 5000);
+        }
+  
+        // 2 однакових — реклама Slots King
+        else if (roll[0] === roll[1] || roll[1] === roll[2] || roll[0] === roll[2]) {
+          document.getElementById("promo-overlay").style.display = "flex";
+        }
+      }
+    }, 100);
+  }
+  function closePromo() {
+    window.location.href = "roulette.html"; // Перехід на іншу сторінку
+  }
